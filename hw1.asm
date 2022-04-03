@@ -1,10 +1,12 @@
+# given a three digit positve number print out (input mod digit) for every digit starting from the left.
+
 .data    
 	space: .asciiz " "
 
 .text
 
 	main:
-		#reads inputed number
+		# reads inputed number
 		li $v0, 5
 		syscall
 		move $s0, $v0
@@ -54,7 +56,7 @@
     		syscall
     	
     	remainder:
-    		#calculates a1 mod a2.
+    		# calculates a1 mod a2.
     		move $t0, $a1
     		move $t1, $a2
     		
@@ -65,7 +67,7 @@
 		jr $ra
 		
 	power: 
-		#calculates a1^a2.
+		# calculates a1^a2.
 		addi $t0, $zero, 1
     		move $t1, $a2
     		
